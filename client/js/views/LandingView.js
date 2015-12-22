@@ -4,7 +4,7 @@ var LandingView = Backbone.View.extend({
   },
 
   render: function() {
-    return this.$el.html('Reached LandingView as a backbone view');
+    return this.$el.html('Use above fields to view students. Select via name, id, or cohort.');
   }
 
 });

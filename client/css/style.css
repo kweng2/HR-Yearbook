@@ -7,19 +7,20 @@ body {
 }
 
 form {
-  display: ine-line;
+  display: block;
 /*  width: 100px;
   height: 30px;*/
 }
 
 #app-container {
-  width: 90%;
+  width: 86%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 10px;
+  padding-top: 10px;
   /*background-color: gray;*/
 }
+
 #page-content-container {
   /*margin-top: 70px;*/
   width: 100%;
@@ -133,9 +134,23 @@ form {
 .student {
   width: 300;
   height: 250;
-  display: inline-block; 
+  display: inline-block;
+  margin: 0 20;
 }
 
 .studentName {
   text-align: center;
+}
+
+.studentImage {
+  border-radius: 20px;
+}
+
+.img-shadow {
+  box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.5);
+  border-radius: 20px;
+}
+
+#loading-image {
+  z-index: 50;
 }

@@ -3,20 +3,15 @@ var StudentsView = Backbone.View.extend({
   el: $('div #page-content-container'),
 
   initialize: function() {
-
     this.render();
-    // this.collection.on('all', this.render, this);
+    this.collection.on('sync', this.render, this);
   },
-
-  template: _.template('<div class="student" data-id="<%- _id %>"> \
-                          <div class="studentName"><%- name %></div> \
-                          <img src = "<%- image %>" /> \
-                        </div>'),
 
   render: function() {
     var html = [];
     this.collection.forEach(function(item){
-      // html.push(item.render());
+      item.set('first', item.get('name').split(' ')[0]);
+      item.set('last', item.get('name').split(' ')[1]);
       var eachStudent = new StudentEntryView({model: item});
       html.push(eachStudent.render());
     });
