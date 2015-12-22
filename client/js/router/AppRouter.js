@@ -6,7 +6,7 @@ var AppRouter = Backbone.Router.extend({
   },
 
   landing: function() {
-
+    console.log('Reached router\'s landing event');
   },
 
 });
