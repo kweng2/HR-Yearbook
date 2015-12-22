@@ -26,7 +26,7 @@
 #### Students
 * URL: '/api/students'
 * Accepts (optional) query parameters for students' name, cohort, image, and id
-* Query Params: name=Strig, cohort=Number, image=String, id=Number
+* Query Params: name=Strig, cohort=Number, image=String, _id=Number
 
 #### Students by ID
 * URL: '/api/students/:id'
