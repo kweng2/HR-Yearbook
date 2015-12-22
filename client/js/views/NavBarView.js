@@ -11,23 +11,20 @@ var NavBarView = Backbone.View.extend({
     // parse the name selector and display page with student of this name
     nameSelector.submit(function(event){
       event.preventDefault();
-      var selectedName = nameSelector.children('input').val();
-      var newStudents = new Students({sname: selectedName});
-    });
+      this.trigger('selectedName');
+    }.bind(this));
 
     // parse the ID selector and display page with student of this ID
     idSelector.submit(function(event){
       event.preventDefault();
-      var selectedId = idSelector.children('input').val();
-      var newStudents = new Students({sid: selectedId});
-    });
+      this.trigger('selectedId');
+    }.bind(this));
 
     // parse the cohort selector and display page with students of this cohort
     cohortSelector.submit(function(event){
       event.preventDefault();
-      var selectedCohort = cohortSelector.children('input').val();
-      var newStudents = new Students({cohort: selectedCohort});
-    });
+      this.trigger('selectedCohort');
+    }.bind(this));
   },
 
   render: function() {

@@ -2,10 +2,10 @@
 var spinnerInit = function () {
   $('#page-content-container').prepend('<div id="loading-image"></div>');
   var opts = {
-     lines: 20,
-     length: 40,
-     width: 4, 
-     radius: 10,
+     lines: 16,
+     length: 10,
+     width: 4,
+     radius: 20,
      corners: 1,
      rotate: 0,
      color: '#000',
@@ -24,4 +24,4 @@ var spinnerInit = function () {
 
 var spinnerRemove = function() {
   $('#loading-image').remove();
-}
+};
