@@ -5,7 +5,7 @@ var InfoWindowView = Backbone.View.extend({
     this.render();
   },
 
-  template: _.template('<div><%- first %></div>'),
+  template: _.template('<div><%- nickname %> <%- first %> <%- last %></div>'),
 
   render: function() {
     this.$el.html(this.template(this.model.attributes));

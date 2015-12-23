@@ -12,6 +12,7 @@ var StudentsView = Backbone.View.extend({
     this.collection.forEach(function(item){
       item.set('first', item.get('name').split(' ')[0]);
       item.set('last', item.get('name').split(' ')[1]);
+      item.set('nickname', generateNickname());
       var eachStudent = new StudentEntryView({model: item});
       html.push(eachStudent.render().el);
     });
